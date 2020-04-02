@@ -1,0 +1,21 @@
+@import 'scss/main.scss';
+
+.concept-logo {
+    span {
+        font-size: $lg-font-size;
+        font-family: $font-family;
+        font-weight: 600;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    .concept-text {
+        overflow: hidden;
+        width: 30px;
+        transition: $easeInTransition;
+    }
+
+    &:hover .concept-text {
+        width: 197px;
+    }
+}
