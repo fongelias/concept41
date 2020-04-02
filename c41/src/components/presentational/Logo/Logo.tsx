@@ -5,9 +5,11 @@ import './Logo.scss';
 
 export const Logo = () => (
     <FlexBox
-        className='concept-logo'
+        alignItems='center'
         justify='center'
     >
-        <span className='concept-text'>CONCEPT</span><span>-41</span>
+        <div className='concept-logo'>
+            <span className='concept-text'>CONCEPT</span><span>-41</span>
+        </div>
     </FlexBox>
 )

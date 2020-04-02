@@ -75,7 +75,7 @@ export const FlexBox = ({
             wrap,
             justify,
             alignItems,
-            alignContent
+            alignContent,
         )
     )}>
         {children}
