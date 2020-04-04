@@ -9,6 +9,10 @@ Testing handled by create-react-app and run through travis. Travis then deploys 
 
 ### S3 setup
  - Create a bucket
+ - Make sure bucket is in default region 'US East (N. Virginia)'
  - Allow public access
  - Generate an Access Key for the corresponding IAM
  - Add to settings on the project's in Travis
+ - Update Bucket Policy with "PublicReadGetObject"
+ - Turn on static site hosting
+ - Create Alias in Route53 to redirect to the bucket
