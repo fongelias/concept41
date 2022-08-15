@@ -3,7 +3,9 @@ import { FlexBox } from 'components/presentational/FlexBox/FlexBox';
 
 import './Logo.scss';
 
-export const Logo = () => (
+export const Logo = () => {
+    console.log('testing');
+    return (
     <FlexBox
         alignItems='center'
         justify='center'
@@ -12,4 +14,4 @@ export const Logo = () => (
             <span className='concept-text'>CONCEPT</span><span>-41</span>
         </div>
     </FlexBox>
-)
+)}
