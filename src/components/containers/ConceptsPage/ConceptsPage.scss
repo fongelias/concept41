@@ -42,7 +42,10 @@
   
     &.disabled span, &:hover.disabled span {
       color: $disabled-base-black;
-      cursor: none;
+    }
+
+    &.disabled, &:hover.disabled {
+      cursor: default;
     }
   }
 }

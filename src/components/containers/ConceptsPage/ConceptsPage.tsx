@@ -52,15 +52,11 @@ export const ConceptsPage = () => {
           }
         }, {} as Record<string, ConceptPageProps>);
 
-        const newProps = defaultConceptPageProps.map((emptyConcept, idx) => {
+        return defaultConceptPageProps.map((emptyConcept, idx) => {
           const currConceptNumber = `${41 - idx}`;
 
           return propsByConceptNumber[currConceptNumber] ? propsByConceptNumber[currConceptNumber] : emptyConcept;
         });
-
-        console.log(newProps);
-
-        return newProps;
       }
 
       fetchData()
@@ -90,7 +86,6 @@ export const ConceptsPage = () => {
                       const num = conceptPageProps.conceptNumber;
                       const numStr = num < 10 ? `0${num}` : `${num}`;
                       const isDisabled = conceptPageProps.visibility === ConceptVisibility.Private;
-                      console.log(isDisabled);
 
                       return (
                         <ConceptLink value={numStr} key={idx} disabled={isDisabled}/>
