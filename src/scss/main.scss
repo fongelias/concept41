@@ -1,1 +1,19 @@
 @import 'scss/variables.scss';
+
+h1 {
+  font-size: $lg-font-size;
+  font-family: $font-family;
+  color: $base-black;
+  font-weight: 600;
+  margin: 0;
+  display: inline-block;
+}
+
+p {
+  font-size: $sm-font-size;
+  font-family: $font-family;
+  color: $base-black;
+  font-weight: 400;
+  margin: 0;
+  display: inline-block;
+}

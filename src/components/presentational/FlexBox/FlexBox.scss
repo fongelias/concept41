@@ -1,4 +1,4 @@
-div {
+.flexbox {
     display: flex;
     width: 100%;
 }
@@ -42,21 +42,25 @@ div {
     justify-content: space-around;
 }
 
+.justify-start {
+    justify-content: flex-start;
+}
+
 /*-- Align Items --*/
 .align-items-start {
-    align-self: flex-start;
+    align-items: flex-start;
 }
 
 .align-items-end {
-    align-self: flex-end;
+    align-items: flex-end;
 }
 
 .align-items-center {
-    align-self: center;
+    align-items: center;
 }
 
 .align-items-baseline {
-    align-self: baseline;
+    align-items: baseline;
 }
 
 /*-- Align Content --*/

@@ -1,0 +1,49 @@
+@import 'scss/main.scss';
+
+.ConceptsPage {
+  width: 100vw;
+  min-height: 100vh;
+
+  .ConceptsPageInner {
+    height: 100%;
+  }
+}
+
+.ConceptLinksContainer {
+  $concept-link-text-width: 45px;
+  $concept-link-text-height: 49px;
+  $concept-link-size: 125px;
+
+  max-width: 7 * $concept-link-size + 1px;
+  min-width: 2 * $concept-link-size + 1px;
+  width: 100%;
+
+  .ConceptLink {
+    width: $concept-link-size;
+    height: $concept-link-size;
+    cursor: pointer;
+
+    .ConceptLinkInner {
+      height: $concept-link-size;
+    }
+    
+    span {
+      font-size: $lg-font-size;
+      font-weight: 600;
+      color: $base-black;
+      width: $concept-link-text-width;
+      height: $concept-link-text-height;
+    }
+  
+    &:hover span {
+      color: $hover-base-black;
+      transition: $compactTransition;
+    }
+  
+    &.disabled span, &:hover.disabled span {
+      color: $disabled-base-black;
+      cursor: none;
+    }
+  }
+}
+

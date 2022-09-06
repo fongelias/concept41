@@ -17,7 +17,8 @@ type FlexJustify =
     'end' |
     'center' |
     'space-between' |
-    'space-around'
+    'space-around' |
+    'start'
 
 type FlexAlignItems =
     'start' |
@@ -38,7 +39,13 @@ function classNameFromFlexType(
     alignItems?: FlexAlignItems,
     alignContent?: FlexAlignContent,
 ): ObjectOf<string, boolean> {
-    const stringifyType = (classPrefix: string, propertyValue?: string) => propertyValue ? `${classPrefix}-${propertyValue}` : '';
+    const stringifyType = (classPrefix: string, propertyValue?: string) => {
+        if (propertyValue) {
+            return classPrefix.length > 0 ? `${classPrefix}-${propertyValue}` : propertyValue;
+        } else {
+            return ''
+        }
+    }
 
     return {
         [stringifyType('direction', direction)]: true,
@@ -69,6 +76,7 @@ export const FlexBox = ({
     alignContent,
 }: IFlexBoxProps) => (
     <div className={cx(
+        'flexbox',
         className,
         classNameFromFlexType(
             direction,

@@ -1,0 +1,18 @@
+@import 'scss/main.scss';
+
+.SideNav {
+  width: 300px;
+  background-color: red;
+
+  .SideNavContainer{
+    width: 300px;
+    background-color: blue;
+  }
+}
+
+.DocsPage {
+  width: 100vw;
+  height: 100vh;
+
+  .DocsContents {}
+}
