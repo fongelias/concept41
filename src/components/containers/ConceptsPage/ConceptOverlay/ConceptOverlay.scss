@@ -2,12 +2,11 @@
 
 .ConceptOverlay {
   position: absolute;
-  height: 0vw;
-  width: 0vw;
+  display: none;
+  width: 100vw;
 
   &.active {
-    height: 100vw;
-    width: 100vw;
+    display: block;
     top: 0;
     left: 0;
     

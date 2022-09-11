@@ -58,27 +58,29 @@ export const ConceptOverlay = ({
   conceptNumber,
   repositoryLocation,
 }: ConceptOverlayProps) => (
-  <div className={cx('ConceptOverlay', {
-      active,
-  })}>
-    <FlexBox
-      direction='column'
-    >
-      <IconX onClick={closeOverlay}/>
-      <FlexBox justify='center'>
-        <div className='ConceptOverlayInner'>
-          <FlexBox direction='column'>
-            <a href={`http://${hostname}`}>
-              <h1>{name}</h1>
-            </a>
-            <ConceptProperty propertyKey="concept type" value={kind}/>
-            <ConceptProperty propertyKey="description" value={resourceDescription}/>
-            <hr/>
-            <Octocat color='white' href={repositoryLocation}/>
-          </FlexBox>
-        </div>
+  <div>
+    <div className={cx('ConceptOverlay', {
+        active,
+    })}>
+      <FlexBox
+        direction='column'
+      >
+        <IconX onClick={closeOverlay}/>
+        <FlexBox justify='center'>
+          <div className='ConceptOverlayInner'>
+            <FlexBox direction='column'>
+              <a href={`http://${hostname}`}>
+                <h1>{name}</h1>
+              </a>
+              <ConceptProperty propertyKey="concept type" value={kind}/>
+              <ConceptProperty propertyKey="description" value={resourceDescription}/>
+              <hr/>
+              <Octocat color='white' href={repositoryLocation}/>
+            </FlexBox>
+          </div>
+        </FlexBox>
       </FlexBox>
-    </FlexBox>
+    </div>
   </div>
 )
 
