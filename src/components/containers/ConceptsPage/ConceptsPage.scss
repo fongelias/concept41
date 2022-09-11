@@ -72,8 +72,8 @@
     &.active .ConceptLinkOverlay {
       height: $concept-link-overlay-size;
       width: $concept-link-overlay-size;
-      top: #{-$concept-link-overlay-size / 2};
-      left: #{-$concept-link-overlay-size / 2};
+      top: calc(-#{$concept-link-overlay-size} / 2);
+      left: calc(-#{$concept-link-overlay-size} / 2);
       opacity: 1;
       background-color: $base-black;
     }
