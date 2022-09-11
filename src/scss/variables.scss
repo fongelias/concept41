@@ -1,5 +1,6 @@
 /*-- Colors -- */
 $base-black: black;
+$base-white: white;
 $deep-space-sparkle: #495e6d;
 $gainsboro: #DBDFE2;
 /*-- Typeography --*/
@@ -14,3 +15,4 @@ $gainsboro: #DBDFE2;
 /*-- Animation --*/
 $easeInTransition: ease-in 0.3s;
 $compactTransition: all ease 0.3s;
+$slowEaseInTransition: ease-in 0.5s;

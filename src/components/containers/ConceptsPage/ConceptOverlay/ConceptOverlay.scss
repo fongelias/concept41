@@ -1,0 +1,40 @@
+@import 'scss/main.scss';
+
+.ConceptOverlay {
+  position: absolute;
+  height: 0vw;
+  width: 0vw;
+
+  &.active {
+    height: 100vw;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    
+    h1 {
+      color: $base-white;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $base-white;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    hr {
+      width: 100%;
+    }
+
+    .ConceptProperty {
+      .ConceptPropertyKey {
+        color: $deep-space-sparkle;
+      }
+
+      .ConceptPropertyValue {
+        margin-left: 20px;
+        color: $base-white;
+      }
+    }
+  }
+}

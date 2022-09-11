@@ -3,8 +3,13 @@
 .ConceptsPage {
   width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
 
   .ConceptsPageInner {
+    height: 100%;
+  }
+
+  .ConceptsPageOverlay {
     height: 100%;
   }
 }
@@ -13,6 +18,7 @@
   $concept-link-text-width: 45px;
   $concept-link-text-height: 49px;
   $concept-link-size: 125px;
+  $concept-link-overlay-size: 3000px;
 
   max-width: 7 * $concept-link-size + 1px;
   min-width: 2 * $concept-link-size + 1px;
@@ -47,6 +53,31 @@
     &.disabled, &:hover.disabled {
       cursor: default;
     }
+
+    .ConceptLinkOverlayContainer {
+      position: relative;
+    }
+
+    .ConceptLinkOverlay {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      transition: $slowEaseInTransition;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  
+    &.active .ConceptLinkOverlay {
+      height: $concept-link-overlay-size;
+      width: $concept-link-overlay-size;
+      top: -$concept-link-overlay-size / 2;
+      left: -$concept-link-overlay-size / 2;
+      opacity: 1;
+      background-color: $base-black;
+    }
   }
+
 }
 
